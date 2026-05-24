@@ -152,8 +152,8 @@ export default function PortfolioWebsite() {
 
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white/5 shadow-2xl">
               <img
-                src="/profile.jpg"
-                alt="Krishna"
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
+                alt="profile"
                 className="h-[650px] w-[500px] object-cover object-top"
               />
               <div className="absolute inset-0 bg-black/20" />
