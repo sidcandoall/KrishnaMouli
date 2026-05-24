@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "homepage": "https://sidcandoall.github.io/KrishnaMouli",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
