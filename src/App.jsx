@@ -156,7 +156,6 @@ export default function PortfolioWebsite() {
                 alt="Krishna"
                 className="h-[650px] w-[500px] object-cover object-top"
               />
-
               <div className="absolute inset-0 bg-black/20" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
