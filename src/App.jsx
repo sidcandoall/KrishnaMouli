@@ -152,7 +152,7 @@ export default function PortfolioWebsite() {
 
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white/5 shadow-2xl">
               <img
-                src="/profile.jpeg"
+                src="/profile.jpg"
                 alt="Krishna"
                 className="h-[650px] w-[500px] object-cover object-top"
               />
