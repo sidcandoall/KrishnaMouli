@@ -63,6 +63,48 @@ export default function PortfolioWebsite() {
     "Agile",
   ];
 
+
+
+  const experience = [
+    {
+      company: "NRI Educational Society",
+      role: "Software Engineer",
+      duration: "Sep 2024 – Feb 2025",
+      tech: ["C#", "ASP.NET", "SQL", "SAP Crystal Reports"],
+      achievements: [
+        "Developed and maintained 450+ enterprise reports.",
+        "Integrated SAP Crystal Reports with ASP.NET applications.",
+        "Designed SQL queries and stored procedures for reporting.",
+        "Collaborated with stakeholders to deliver reporting solutions."
+      ],
+    },
+    {
+      company: "Infosys",
+      role: "Software Engineer – Banking Solutions",
+      duration: "Apr 2023 – Jun 2024",
+      tech: ["Java", "Spring Boot", "REST APIs", "Docker", "SQL"],
+      achievements: [
+        "Designed and maintained Java Spring Boot microservices.",
+        "Built secure REST APIs using JWT authentication.",
+        "Optimized SQL queries improving performance by ~75%.",
+        "Automated backend workflows using Docker.",
+        "Developed trade filtering features for enterprise banking applications."
+      ],
+    },
+    {
+      company: "Infosys",
+      role: "Software Engineer Trainee",
+      duration: "Oct 2022 – Mar 2023",
+      tech: ["Java", "Angular", "Spring Boot", "SQL"],
+      achievements: [
+        "Developed full-stack applications using Java, Angular, and SQL.",
+        "Built backend modules with Spring Boot.",
+        "Optimized 150+ SQL queries.",
+        "Implemented modular Angular components."
+      ],
+    },
+  ];
+
   return (
      <div className="min-h-screen bg-[#0f1115] text-white font-sans">
       {/* Navbar */}
@@ -75,6 +117,10 @@ export default function PortfolioWebsite() {
           <nav className="hidden gap-8 text-sm md:flex">
             <a href="#about" className="transition hover:text-zinc-300">
               About
+            </a>
+
+            <a href="#experience" className="transition hover:text-zinc-300">
+              Experience
             </a>
 
             <a href="#projects" className="transition hover:text-zinc-300">
@@ -209,6 +255,60 @@ export default function PortfolioWebsite() {
           </div>
         </div>
       </motion.section>
+
+
+      {/* Experience */}
+      <motion.section
+        id="experience"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="mx-auto max-w-7xl px-6 py-28"
+      >
+        <div className="mb-20">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-zinc-500">
+            Experience
+          </p>
+          <h2 className="text-5xl font-bold">
+            Professional<br />Experience
+          </h2>
+        </div>
+
+        <div className="space-y-16">
+          {experience.map((job, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ x: 5 }}
+              className="border-b border-white/5 pb-12"
+            >
+              <h3 className="text-3xl font-bold">{job.role}</h3>
+              <p className="mt-2 text-lg text-zinc-400">{job.company}</p>
+              <p className="mt-1 text-sm uppercase tracking-widest text-zinc-500">
+                {job.duration}
+              </p>
+
+              <ul className="mt-6 space-y-2 text-zinc-400">
+                {job.achievements.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {job.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
 
       {/* Projects */}
       <motion.section
